@@ -1,0 +1,7 @@
+name: MagicaCast
+version: '${project.version}'
+main: ru.reddskull.magicacast.Main
+api-version: '1.19'
+authors: [ReddSkull]
+description: Плагин на магию
+website: nescam.ru
