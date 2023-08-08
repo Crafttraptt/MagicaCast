@@ -5,3 +5,18 @@ api-version: '1.19'
 authors: [ReddSkull]
 description: Плагин на магию
 website: nescam.ru
+commands:
+  healspell:
+    description: Команда на хилл
+    usage: /<command>
+    permission: magicacast.heal
+    permission-message: Нет прав на использование команды
+  spellmenu:
+    description: Команда для открытия меню заклинаний
+    usage: /<command>
+    aliases:
+      - menuspell
+      - sm
+permissions:
+  magicacast.heal:
+    description: Право на использование /heal

@@ -1,6 +1,8 @@
 package ru.reddskull.magicacast;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import ru.reddskull.magicacast.commands.MenuSpellsCommand;
+import ru.reddskull.magicacast.listener.ClickMenuEvent;
 
 import java.util.logging.Logger;
 
@@ -16,10 +18,10 @@ public final class Main extends JavaPlugin {
 
         log.info("MagicaCast включён!");
         // хрень на лог в консоле
-    }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+        getCommand("spellmenu").setExecutor(new MenuSpellsCommand());
+        // штука для регистрации команды
+
+        getServer().getPluginManager().registerEvents(new ClickMenuEvent(this), this);
     }
 }
